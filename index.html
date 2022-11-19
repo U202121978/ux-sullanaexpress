@@ -1,18 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sullana Express</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sullana Express</title>
 
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+  <!-- Roboto Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <!-- /Roboto Font -->
+
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="header">
     <div class="container">
-        <h1>Sullana Express</h1>
+      <h1 class="logo"><a href="https://www.sullanaexpress.com.pe" title="Transportes Sullana Express"><img src="images/logo.png" alt="Transportes Sullana Express"><span>Transportes Sullana Express</span></a></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Destino</a></li>
+          <li class="has-children">
+            <a href="#">Servicios</a>
+            <ul>
+              <li><a href="#">Servicio Black</a></li>
+              <li><a href="#">Servicio Imperial</a></li>
+              <li><a href="#">Servicio Plus</a></li>
+              <li><a href="#">Servicio Suite</a></li>
+              <li><a href="#">Servicio Carga y Encomiendas</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Terminales</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
-    <script src="main.js"></script>
+  </header>
+
+  <main>
+    <div class="hero vfull">
+        <div class="search-box container">
+          Buscador
+        </div>
+
+        <div class="hero-slider">
+          <div class="slider__slides">
+            <div class="slide slide-0 active"></div>
+            <div class="slide slide-1"></div>
+            <!-- <div class="slide slide-2"></div> -->
+          </div>
+          <div class="slider__paginator"></div>
+        </div>
+
+    </div>
+
+    <section class="container vfull">
+      <p>otra sección</p>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

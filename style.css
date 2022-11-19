@@ -1,15 +1,275 @@
+:root {
+  --color-1: #E90A39;
+  --color-2: #4A4A4A;
+  --color-3: #FCA311;
+  --color-4: #E5E5E5;
+  --color-5: #fff;
+
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --roboto-thin: 100;
+  --roboto-light: 300;
+  --roboto-regular: 400;
+  --roboto-medium: 500;
+  --roboto-bold: 700;
+}
+
 body {
-    font-size: 12px;
-    line-height: 1.1;
-    color: #111;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #111;
 }
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .box-center {
-    margin: 0 auto;
+  margin: 0 auto;
 }
+
+.header {
+  color: #fff;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 100%);
+}
+
+.header .container {
+  height: 100%;
+}
+
+.header .logo {
+  margin: 6px 0 0 0;
+  float: left;
+}
+
+.header .logo a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.header .logo img {
+  margin: 0;
+}
+
+.header .logo span {
+  line-height: 1%;
+  text-indent: -100%;
+  overflow: hidden;
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+}
+
+
+
+.nav {
+  float: right;
+  height: 100%;
+}
+
+.nav ul {
+  margin: 60px 0 0;
+  padding: 0;
+}
+
+.nav ul li {
+  list-style: none;
+  float: left;
+}
+
+.nav ul li a {
+  display: inline-block;
+  padding: 8px 24px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: var(--roboto-bold);
+  font-size: 16px;
+  line-height: 1em;
+}
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.nav ul li a:active {
+  color: #fff;
+}
+
+.nav ul li.has-children {
+  position: relative;
+}
+
+.nav ul li.has-children a {
+  text-decoration: none;
+}
+
+.nav ul li.has-children > a::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+}
+
+.nav ul li ul {
+  /* display: none; */
+  display: block;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  width: 260px;
+  background-color: var(--color-1);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  opacity: 0;
+  transform: translate3d(0,-10px,0);
+  transition: transform .6s var(--ease-out-cubic),
+              opacity .6s var(--ease-out-cubic);
+}
+
+.nav ul li ul li {
+  width: 100%;
+}
+
+.nav ul li ul a {
+  font-weight: var(--roboto-medium);
+  display: block;
+  padding: 8px 12px;
+  margin: 0 12px;
+  border-radius: 6px;
+  font-size: .9rem;
+}
+
+.nav ul li ul a:hover {
+  background-color: #B92847;
+}
+
+.nav ul li.has-children:hover ul {
+  display: block;
+  transform: translate3d(0,0,0);
+  opacity: 1;
+  height: auto;
+  padding: 13px 0;
+}
+
+
+
+
+
+
+.vfull {
+  height: 100vh;
+}
+
+.hero {
+  background-color: #eee;
+}
+
+
+
+.hero-slider,
+.slider__slides {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+}
+
+.hero-slider .slider__paginator {
+  position: absolute;
+  z-index: 4;
+  bottom: 60px;
+  width: 100%;
+  height: 12px;
+  text-align: center;
+}
+
+.hero-slider .slider__paginator > span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #fff;
+  margin: 0 12px;
+  line-height: 1%;
+  cursor: pointer;
+}
+
+.hero-slider .slider__paginator > span.active {
+  background-color: var(--color-1);
+  cursor: default;
+}
+
+
+.hero-slider .slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  display: none;
+  z-index: 1;
+  opacity: 0.0;
+}
+.slide.from-right {
+  transform: translate3d(150%,0,0) scale(2.0);
+}
+.slide.from-left {
+  transform: translate3d(-150%,0,0) scale(2.0);
+}
+.slide.active {
+  display: block;
+  transform: translate3d(0%,0,0) scale(1.0);
+  opacity: 1.0;
+}
+
+
+.hero-slider .slide-0 {
+  background-image: url(./images/hero-piura.jpeg);
+}
+.hero-slider .slide-1 {
+  background-image: url(./images/hero-arequipa.jpeg);
+}
+.hero-slider .slide-2 {
+  background-image: url(./images/hero-piura.jpeg);
+}
+
+.hero-slider .slide-transition {
+  display: block;
+  transition: transform .85s var(--ease-out-cubic),
+              opacity .85s var(--ease-out-cubic);
+  will-change: transform, opacity;
+  z-index: 2;
+}
+
+.search-box {
+  position: absolute;
+  z-index: 5;
+  bottom: 25vh;
+  left: 50%;
+  margin-left: -480px;
+  width: 960px;
+  background-color: #fff;
+  height: 52px;
+  border-radius: 4px;
+}
+
 
