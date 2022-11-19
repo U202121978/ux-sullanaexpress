@@ -1,0 +1,15 @@
+body {
+    font-size: 12px;
+    line-height: 1.1;
+    color: #111;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box-center {
+    margin: 0 auto;
+}
+
