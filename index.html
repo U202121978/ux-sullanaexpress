@@ -43,8 +43,37 @@
 
   <main>
     <div class="hero vfull">
-        <div class="search-box container">
-          Buscador
+
+        <div class="search-box-container">
+          <img class="slogan" src="images/slogan.png" alt="¿A dónde te gustaría viajar hoy?">
+          <div class="search-box">
+            <div class="box box-origin">
+              <label for="origin">ORIGEN</label>
+              <input class="control" type="text" name="origin" id="origin" placeholder="Viajando desde">
+            </div>
+            <div class="box box-swap">
+              <button><img src="images/swap.png" alt="Intercambiar"></button>
+            </div>
+            <div class="box box-target">
+              <label for="target">DESTINO</label>
+              <input class="control" type="text" name="target" id="target" placeholder="Llegando a">
+            </div>
+            <div class="box box-date-departure">
+              <label for="date-departure">FECHA</label>
+              <input class="control" type="text" name="date-departure" id="date-departure">
+            </div>
+            <div class="box box-date-return">
+              <label for="date-return">FECHA RETORNO</label>
+              <input class="control" type="text" name="date-return" id="date-return" placeholder="Opcional">
+            </div>
+            <div class="box box-passengers">
+              <label for="passengers">PASAJEROS</label>
+              <span class="control">1 Pasajero</span>
+            </div>
+
+            <button class="box box-button"><span>Search</span></button>
+
+          </div>
         </div>
 
         <div class="hero-slider">
