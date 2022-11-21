@@ -1,4 +1,71 @@
 @import url(base.css);
 @import url(hero.css);
 
+.block-container {
+  padding: 120px 0;
+}
 
+.block {
+  width: 960px;
+  margin: 0 auto 170px;
+  display: flex;
+  align-items: center;
+}
+
+.block:last-child {
+  margin-bottom: 0;
+}
+
+.block-image {
+  width: 45%;
+  min-width: 223px;
+  line-height: 1%;
+  text-align: center;
+  flex: 0 0 auto;
+}
+.block-image img {
+  width: 223px;
+}
+
+.block-content {
+  flex: 1 1 auto;
+}
+
+.block-content .title {
+  font-size: 36px;
+  font-weight: var(--roboto-thin);
+  color: var(--color-1);
+  margin: 0;
+}
+.block-content .content {
+  margin: 30px 0;
+  font-size: 14px;
+  font-weight: var(--roboto-light);
+  line-height: 24px;
+  color: var(--color-2);
+}
+.block-content .content p {
+  margin-bottom: 0;
+  width: 80%;
+}
+
+.block-content .content p:last-child {
+  margin-bottom: 0;
+}
+
+.block-content button {
+  background-color: var(--color-1);
+  color: #fff;
+  padding: 1.1em 24px;
+  font-size: 16px;
+  font-weight: var(--roboto-bold);
+  line-height: 1em;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(74,74,74,0.6);
+}
+.block-content button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0px 3px rgba(74,74,74,0.6);
+}
