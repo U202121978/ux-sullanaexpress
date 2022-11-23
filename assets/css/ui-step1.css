@@ -1,2 +1,119 @@
 @import url(base.css);
+@import url(search-box.css);
 
+.form-search-container {
+
+}
+
+.search-box {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  width: auto;
+  font-size: 1.2rem;
+}
+
+.results {
+  margin-bottom: 60px;
+  color: var(--color-2);
+}
+
+.result {
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.bus-type {
+
+}
+
+.bus-type .gallery {
+  border-radius: 8px;
+  width: 250px;
+  height: 200px;
+  box-sizing: border-box;
+}
+.bus-type .gallery .image {
+  background-color: #ddd;
+  border-radius: 6px;
+  height: calc(100% - 5px);
+  margin: 3px 3px 2px;
+  box-sizing: border-box;
+}
+
+.bus-content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.bus-content .bus-header {
+  height: 40px;
+  border-bottom: 1px solid var(--color-1);
+  padding-bottom: 6px;
+}
+.bus-content .bus-header .title {
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: var(--roboto-light);
+}
+.bus-content .bus-header .price {
+  font-size: 16px;
+  line-height: 1.1;
+  font-weight: var(--roboto-light);
+}
+.bus-content .bus-header .price-symbol {
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: var(--roboto-regular);
+  color: var(--color-1);
+}
+.bus-content .bus-header .price-number {
+  font-size: 32px;
+  line-height: 1.1;
+  font-weight: var(--roboto-bold);
+  color: var(--color-1);
+}
+
+.bus-services {
+  padding-right: 60px;
+}
+
+.bus-services .title {
+  font-size: 16px;
+  font-weight: var(--roboto-bold);
+  line-height: 1;
+  margin: 25px 0 0;
+}
+
+.bus-service {
+  font-size: 16px;
+  font-weight: var(--roboto-light);
+  line-height: 1;
+  padding: 20px 0 0;
+  width: 33%;
+  display: inline-block;
+}
+.bus-service i {
+  opacity: 0.5;
+}
+
+.bus-services + .btn i {
+  font-size: 0.8em;
+opacity: 0.75;
+}
+
+
+
+.result .schedules {
+  transition: height 0.6s ease-out,
+              opacity 0.6s ease-out;
+}
+
+.result .schedules.hide {
+  height: 1px;
+  opacity: 0.0;
+}
+.result .schedules.hide.anim-start {
+  height: 0;
+  opacity: 1.0;
+  will-change: opacity, height;
+}

@@ -48,7 +48,7 @@
 
         <div class="search-box-container">
           <img class="slogan" src="assets/images/slogan.png" alt="¿A dónde te gustaría viajar hoy?">
-          <div class="search-box">
+          <form id="form-search" class="search-box box-shadow" action="step1.html" method="GET">
             <div class="box box-origin">
               <label for="origin">ORIGEN</label>
               <input class="control" type="text" name="origin" id="origin" placeholder="Viajando desde">
@@ -73,9 +73,9 @@
               <span class="control">1 Pasajero</span>
             </div>
 
-            <button class="box box-button"><span><i class="fa-solid fa-magnifying-glass"></i>Buscar</span></button>
+            <button class="box box-button" id="btn-search"><span><i class="fa-solid fa-magnifying-glass"></i>Buscar</span></button>
 
-          </div>
+          </form>
         </div>
 
         <div class="hero-slider">

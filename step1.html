@@ -45,6 +45,111 @@
 
   <main>
 
+    <div class="container form-search-container">
+      <form id="form-search" class="search-box box-shadow" action="step1.html" method="GET">
+        <div class="box box-origin">
+          <label for="origin">ORIGEN</label>
+          <input class="control" type="text" name="origin" id="origin" placeholder="Viajando desde">
+        </div>
+        <div class="box box-swap">
+          <button><i class="fa-solid fa-right-left"></i></button>
+        </div>
+        <div class="box box-target">
+          <label for="target">DESTINO</label>
+          <input class="control" type="text" name="target" id="target" placeholder="Llegando a">
+        </div>
+        <div class="box box-date-departure">
+          <label for="date-departure">FECHA</label>
+          <input class="control" type="text" name="date-departure" id="date-departure">
+        </div>
+        <div class="box box-date-return">
+          <label for="date-return">FECHA RETORNO</label>
+          <input class="control" type="text" name="date-return" id="date-return" placeholder="Opcional">
+        </div>
+        <div class="box box-passengers">
+          <label for="passengers">PASAJEROS</label>
+          <span class="control">1 Pasajero</span>
+        </div>
+
+        <button class="box box-button" id="btn-search"><span><i class="fa-solid fa-magnifying-glass"></i>Buscar</span></button>
+      </form>
+    </div>
+
+    <section class="results container">
+      <div class="result box-shadow-s">
+        <div class="bus-type flex">
+          <div class="gallery">
+            <div class="image"></div>
+          </div>
+          <div class="bus-content grow-1">
+            <div class="bus-header flex items-flex-end">
+              <div class="grow-1 title">Económico</div>
+              <div class="price">Desde <span class="price-symbol">S/</span><span class="price-number">90</span></div>
+            </div>
+            <div class="flex items-flex-end">
+              <div class="bus-services grow-1">
+                <div class="title">Servicios</div>
+                <div>
+                  <div class="bus-service bus-service-1"><i class="fa-solid fa-bus"></i> 1 Nivel</div>
+                  <div class="bus-service bus-service-2"><i class="fa-solid fa-slash"></i> 140°</div>
+                  <div class="bus-service bus-service-3"><i class="fa-solid fa-gauge-high"></i> 90 km/h</div>
+                </div>
+                <div>
+                  <div class="bus-service bus-service-4"><i class="fa-solid fa-location-pin"></i> GPS 24 h</div>
+                  <div class="bus-service bus-service-5"><i class="fa-solid fa-circle-play"></i> Multimedia</div>
+                  <div class="bus-service bus-service-6"><i class="fa-solid fa-toilet"></i> Baño</div>
+                </div>
+              </div>
+              <button class="btn grow-0">Seleccionar <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="schedules hide">
+          Schedules
+        </div>
+      </div>
+
+      <div class="result box-shadow-s">
+        <div class="bus-type flex">
+          <div class="gallery">
+            <div class="image"></div>
+          </div>
+          <div class="bus-content grow-1">
+            <div class="bus-header flex items-flex-end">
+              <div class="grow-1 title">Black</div>
+              <div class="price">Desde <span class="price-symbol">S/</span><span class="price-number">120</span></div>
+            </div>
+            <div class="flex items-flex-end">
+              <div class="bus-services grow-1">
+                <div class="title">Servicios</div>
+                <div>
+                  <div class="bus-service bus-service-1"><i class="fa-solid fa-bus"></i> 1 Nivel</div>
+                  <div class="bus-service bus-service-2"><i class="fa-solid fa-slash"></i> 140°</div>
+                  <div class="bus-service bus-service-2"><i class="fa-solid fa-wifi"></i> WIFI</div>
+                </div>
+                <div>
+                  <div class="bus-service bus-service-3"><i class="fa-solid fa-gauge-high"></i> 90 km/h</div>
+                  <div class="bus-service bus-service-4"><i class="fa-solid fa-location-pin"></i> GPS 24 h</div>
+                  <div class="bus-service bus-service-5"><i class="fa-solid fa-circle-play"></i> Multimedia</div>
+                </div>
+                <div>
+                  <div class="bus-service bus-service-6"><i class="fa-solid fa-toilet"></i> Baños x2</div>
+                  <div class="bus-service bus-service-6"><i class="fa-solid fa-cloud-sun"></i> Climatización</div>
+                  <div class="bus-service bus-service-6"><i class="fa-solid fa-usb"></i> Cargador USB</div>
+                </div>
+                <div>
+                  <div class="bus-service bus-service-6"><i class="fa-solid fa-baby"></i> Cambiador de bebés</div>
+                </div>
+              </div>
+              <button class="btn grow-0">Seleccionar <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="schedules hide">
+          Schedules
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
