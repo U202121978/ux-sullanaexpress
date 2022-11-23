@@ -7,7 +7,7 @@
   <title>Sullana Express</title>
 
   <link href="assets/favicon.png" rel="icon">
-  <link rel="stylesheet" href="styles/ui-home.css">
+  <link rel="stylesheet" href="assets/css/ui-home.css">
 
   <!-- Roboto Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,9 +18,9 @@
   <link rel="stylesheet" href="assets/fontawesome/css/all.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header header--on-hero">
     <div class="container">
-      <h1 class="logo"><a href="https://www.sullanaexpress.com.pe" title="Transportes Sullana Express"><img src="images/logo.png" alt="Transportes Sullana Express"><span>Transportes Sullana Express</span></a></h1>
+      <h1 class="logo"><a href="https://www.sullanaexpress.com.pe" title="Transportes Sullana Express"><img src="assets/images/logo.png" alt="Transportes Sullana Express"><span>Transportes Sullana Express</span></a></h1>
       <nav class="nav">
         <ul>
           <li><a href="#">Inicio</a></li>
@@ -47,7 +47,7 @@
     <div class="hero vfull">
 
         <div class="search-box-container">
-          <img class="slogan" src="images/slogan.png" alt="¿A dónde te gustaría viajar hoy?">
+          <img class="slogan" src="assets/images/slogan.png" alt="¿A dónde te gustaría viajar hoy?">
           <div class="search-box">
             <div class="box box-origin">
               <label for="origin">ORIGEN</label>
@@ -82,18 +82,18 @@
           <div class="slider__slides">
             <div class="slide slide-0 active"></div>
             <div class="slide slide-1"></div>
-            <!-- <div class="slide slide-2"></div> -->
+            <div class="slide slide-2"></div>
           </div>
           <div class="slider__paginator"></div>
         </div>
 
     </div>
 
-    <section class="block-container container vfull">
+    <section class="block-container">
 
       <div class="block">
         <div class="block-image">
-          <img src="images/block-security.png" alt="Seguridad">
+          <img src="assets/images/block-security.png" alt="Seguridad">
         </div>
         <div class="block-content">
           <h3 class="title">Seguridad</h3>
@@ -106,7 +106,7 @@
 
       <div class="block">
         <div class="block-image">
-          <img src="images/block-new-targets.png" alt="Seguridad">
+          <img src="assets/images/block-new-targets.png" alt="Seguridad">
         </div>
         <div class="block-content">
           <h3 class="title">Nuevos Destinos</h3>
@@ -118,14 +118,43 @@
       </div>
 
     </section>
+
+    <section class="block-container block-container-features">
+      <div class="container">
+        <h3 class="title">Siempre mejorando para ti</h3>
+
+        <div class="block-features">
+          <div class="feature">
+            <span>
+              <span class="age"><span class="plus">+</span>20</span>
+              <span>años</span>
+            </span>
+            <p>Recorriendo el Perú</p>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-bus"></i>
+            <p>Flota Moderna</p>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <p>Mantenimiento Constante</p>
+          </div>
+          <div class="feature">
+            <i class="fa-sharp fa-solid fa-satellite-dish"></i>
+            <p>Monitoreo Permanente</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
 
   <footer>
     <div class="container">
-      <img src="images/footer.png" alt="Footer" width="1000">
+      <img src="assets/images/footer.png" alt="Footer" width="1000">
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="assets/js/ui-home.js"></script>
 </body>
 </html>

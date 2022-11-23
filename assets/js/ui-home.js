@@ -1,5 +1,3 @@
-console.log('Sullana Express');
-
 let currentIndex = '0';
 let sliderBusy = false;
 let sliderAutomatic = false;
