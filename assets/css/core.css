@@ -69,6 +69,7 @@ body {
 }
 
 .btn {
+  text-decoration: none;
   color: #fff;
   cursor: pointer;
   background-color: var(--color-1);
@@ -93,6 +94,9 @@ body {
   border: 0;
   outline: none;
 }
+.btn.btn-secondary {
+  background-color: var(--color-2);
+}
 
 
 .float-right {
@@ -100,4 +104,10 @@ body {
 }
 .float-left {
   float: left;
+}
+.color-1 {
+  color: var(--color-1);
+}
+.color-2 {
+  color: var(--color-2);
 }

@@ -98,22 +98,59 @@
 
 .bus-services + .btn i {
   font-size: 0.8em;
-opacity: 0.75;
+  opacity: 0.75;
 }
 
 
 
-.result .schedules {
-  transition: height 0.6s ease-out,
-              opacity 0.6s ease-out;
-}
+.schedules {
+  overflow: hidden;
+  opacity: 1.0;
+  max-height: 300px;
 
-.result .schedules.hide {
-  height: 1px;
+  will-change: opacity;
+  transition: opacity 0.3s ease-out,
+              max-height 0.3s ease-out;
+}
+.schedules.hide {
+  max-height: 0px;
   opacity: 0.0;
 }
-.result .schedules.hide.anim-start {
-  height: 0;
-  opacity: 1.0;
-  will-change: opacity, height;
+
+.schedule {
+  padding: 30px 20px;
+  position: relative;
+}
+.schedule::before {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, rgba(74, 74, 74, 0) 0%,
+                                     rgba(74, 74, 74, 0.15) 50%,
+                                     rgba(74, 74, 74, 0) 100%);
+}
+
+.schedule-label {
+  font-size: 14px;
+  font-weight: var(--roboto-bold);
+  color: var(--color-2);
+  line-height: 1;
+}
+.schedule-content {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: var(--roboto-light);
+  color: var(--color-2);
+  line-height: 1.1;
+}
+.schedule-content i {
+  font-size: 0.9em;
+}
+
+.schedule-time {
+  text-align: right;
+  padding-right: 60px;
 }
