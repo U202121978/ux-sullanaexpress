@@ -151,6 +151,8 @@
 }
 
 .schedule-time {
+  font-size: 14px;
+  color: var(--color-2);
   text-align: right;
   padding-right: 60px;
 }
