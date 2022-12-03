@@ -28,6 +28,10 @@ function sendFile(res, fileURI, contentType) {
     file = './app/404.html';
   }
 
+  console.log('---------------------------------------');
+  console.log('__dirname', __dirname);
+  console.log('file', file);
+  console.log('---------------------------------------');
   fs.readFile(file, function(err, data) {
     if(err) {
       res.send("Oops! Couldn't find that file.");
