@@ -64,8 +64,7 @@ dot.classList.add('active');
 
 const dots = document.querySelectorAll('.hero-slider .slider__paginator > span');
 
-dots.forEach(function (dot) {
-  console.log('ok');
+Array.prototype.forEach.call(dots, function (dot) {
   dot.addEventListener('click', onPaginatorClick);
 });
 
@@ -83,3 +82,31 @@ function sliderAutomaticStart() {
 };
 
 sliderAutomaticStart();
+
+
+// #region SWAP
+const txtOrigin = document.getElementById('origin');
+const txtTarget = document.getElementById('target');
+
+document.getElementById('btn-swap').addEventListener('click', function (evt) {
+  evt.preventDefault();
+  let tempValue = txtOrigin.value;
+  txtOrigin.value = txtTarget.value;
+  txtTarget.value = tempValue;
+});
+// #endregion SWAP
+
+// #region DatePicker
+const formSearch = document.getElementById('form-search');
+const dateDeparture = document.getElementById('date-departure');
+const dateReturn = document.getElementById('date-return');
+
+const datepicker = new DateRangePicker(dateDeparture, {
+  // format: 'D., dd M. \'yy',
+  format: 'D. dd M. yyyy',
+  language: 'es',
+  maxDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), // 2 semanas
+  inputs: [dateDeparture, dateReturn],
+  autoHide: true
+});
+// #endregion DatePicker

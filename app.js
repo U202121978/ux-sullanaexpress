@@ -6,7 +6,9 @@ const app = express();
 const mime = require('mime');
 const fs = require('fs')
 
-app.all('/*', function(req, res, next)
+const pathbase = '/ux-sullana-express';
+
+app.all(`${pathbase}/*`, function(req, res, next)
 {
   // Set respons header (geen idee of dit compleet is)
   res.header("Access-Control-Allow-Origin","*");
@@ -20,10 +22,10 @@ app.all('/*', function(req, res, next)
 });
 
 function sendFile(res, fileURI, contentType) {
-  var file = './' + fileURI;
+  var file = './app/' + fileURI;
 
   if (!fs.existsSync(file)) {
-    file = './404.html';
+    file = './app/404.html';
   }
 
   fs.readFile(file, function(err, data) {
@@ -41,11 +43,11 @@ function sendFile(res, fileURI, contentType) {
   });
 }
 
-app.get('/', (req, res) => {
+app.get(`${pathbase}/`, (req, res) => {
   sendFile(res, 'index.html');
 });
 
-app.get('/:file', (req, res) => {
+app.get(`${pathbase}/:file`, (req, res) => {
   sendFile(res, req.params.file);
 });
 
