@@ -54,89 +54,83 @@
     p{
       width: 50%;
     }
-  
+
   </style>
   <main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
- <div class="padding">
-        <div class="row">
-            <div class="container-fluid d-flex justify-content-center">
-                <div class="col-sm-8 col-md-6">
-                    <div class="card">
-                        <div class="card-header">
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span>Pago con tarjeta CRÉDITO/DEBITO</span>
-                                
-                            </div>
-
-                            <div class="col-md-6 text-right" style="margin-top: -5px;">
-
-                                  <img src="https://img.icons8.com/color/36/000000/visa.png">
-                                  <img src="https://img.icons8.com/color/36/000000/mastercard.png">
-                                            
-                            </div>      
-
-                        </div>    
-  
-                        </div>
-                        <div class="card-body" style="height: 350px">
-                            <div class="form-group">
-                               <label for="cc-number" class="control-label">Número de tarjeta</label>
-                               <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;" required>
-                            </div>
-
-                          <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                   <label for="cc-exp" class="control-label">MM/AA</label>
-                                   <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="&bull;&bull; / &bull;&bull;" required>
-                                </div>
-
-
-                            </div>
-
-                             <div class="col-md-6">
-                               <div class="form-group">
-                                 <label for="cc-cvc" class="control-label">CVV</label>
-                                 <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="&bull;&bull;&bull;&bull;" required>
-                              </div>
-                            
-                            </div>
-                              
-      
-                            <div class="form-group">
-                               <label for="numeric" class="control-label">Nombres</label>
-                               <input  type="text" class="input-lg form-control">
-                           </div>
-
-                           <div class="form-group">
-                            <label for="numeric" class="control-label">Apellidos</label>
-                            <input  type="text" class="input-lg form-control">
-                            <div>
-                              <label for="email">Correo:</label>
-                              <input type="email" id="email"
-                                pattern=".+@globex\.com" size="30" required>
-
-                            </div>
-                        
-
-                        </div>
-
-
-                           <div class="form-group">
-                            
-                            <input  value="     PAGAR 90    " type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container form-search-container">
+      <form id="form-search" class="search-box search-box--full box-shadow" action="step1.html" method="GET">
+        <div class="box box-origin">
+          <label for="origin">ORIGEN</label>
+          <input class="control" type="text" name="origin" id="origin" placeholder="Viajando desde">
+        </div>
+        <div class="box box-swap">
+          <button><i class="fa-solid fa-right-left"></i></button>
+        </div>
+        <div class="box box-target">
+          <label for="target">DESTINO</label>
+          <input class="control" type="text" name="target" id="target" placeholder="Llegando a">
+        </div>
+        <div class="box box-date-departure">
+          <label for="date-departure">FECHA</label>
+          <input class="control" type="text" name="date-departure" id="date-departure">
+        </div>
+        <div class="box box-date-return">
+          <label for="date-return">FECHA RETORNO</label>
+          <input class="control" type="text" name="date-return" id="date-return" placeholder="Opcional">
+        </div>
+        <div class="box box-passengers">
+          <label for="passengers">PASAJEROS</label>
+          <span class="control">1 Pasajero</span>
         </div>
 
-</div>
+        <button class="box box-button" id="btn-search"><span><i class="fa-solid fa-magnifying-glass"></i>Buscar</span></button>
+      </form>
+    </div>
+
+    <div class="container">
+      <div class="section-title"><span><i class="fa-solid fa-seat-airline"></i> Paso 2: Ida</span> Selecciona tus asientos</div>
+      <div class="section-underline"><span></span></div>
+    </div>
+
+    <div class="container">
+      <div class="seating-feature">
+        <div class="seating-feature__price">S/ 120</div>
+        <div class="seating-feature__detail">Reclinación 160</div>
+      </div>
+
+      <div class="seating-feature seating-feature--selected">
+        <div class="seating-feature__price">S/ 150</div>
+        <div class="seating-feature__detail">Reclinación 180</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="seatings" data-total="56">
+        <template id="seat">
+          <li class="seat">
+            <input type="checkbox" id="seat-$nro" class="seat-checkbox">
+            <label for="seat-$nro">$nro</label>
+          </li>
+        </template>
+        <template id="seat-tv">
+          <li class="seat tv"></li>
+        </template>
+        <template id="seat-empty">
+          <li class="seat empty"></li>
+        </template>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="section-underline"><span></span></div>
+
+      <div class="section-footer">
+        <a href="step1.html" class="btn btn-secondary grow-0">Anterior</a>
+        <a href="step3.html" class="btn grow-0">Siguiente</a>
+      </div>
+    </div>
+
   </main>
 
   <footer>

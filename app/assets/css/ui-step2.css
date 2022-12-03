@@ -1,3 +1,129 @@
 @import url(base.css);
+@import url(search-box.css);
+
+.section-title {
+  font-size: 18px;
+  font-weight: var(--roboto-light);
+  margin-bottom: 10px;
+  color: var(--color-2);
+}
+.section-title span {
+  color: var(--color-1);
+  font-weight: var(--roboto-bold);
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+.section-underline {
+  height: 3px;
+  background-color: rgba(74, 74, 74, .25);
+  margin-bottom: 30px;
+}
+
+.section-underline span {
+  display: block;
+  width: 200px;
+  height: 100%;
+  background-color: var(--color-1);
+}
+
+.seating-feature {
+  padding: 15px 40px;
+  background-color: hsla(0, 0%, 29%, 0.25);
+  color: var(--color-2);
+  font-size: 22px;
+  line-height: 1em;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: background-color .15s var(--ease-out-cubic),
+              color .15s var(--ease-out-cubic);
+}
+.seating-feature:last-child {
+  margin-right: 0px;
+}
+.seating-feature:hover {
+  background-color: hsla(0, 0%, 59%, 0.25);
+  background-color: hsl(347, 92%, 63%);
+  color: #fff;
+}
+
+.seating-feature--selected {
+  cursor: default;
+  background-color: var(--color-1);
+  background-color: hsl(347, 92%, 48%);
+  color: #fff;
+}
+.seating-feature--selected:hover {
+  background-color: hsl(347, 92%, 48%);
+}
+
+.seating-feature__price {
+  font-weight: var(--roboto-bold);
+}
+.seating-feature__detail {
+  font-size: .7em;
+  line-height: 1em;
+  display: inline-block;
+  margin-top: 10px;
+}
 
 
+.seatings {
+  display: flex;
+  width: 100%;
+  margin: 30px 0;
+}
+.seatings ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-direction: column-reverse;
+}
+.seatings ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.seat {
+  height: 50px;
+  width: 50px;
+}
+.seat.tv {
+  background: url(https://civa-files.s3.amazonaws.com/static/img/icons/tv.png) no-repeat center center;
+  transform: rotate(-90deg);
+  margin-left: -15px;
+}
+.seat input {
+  width: 0;
+  height: 0;
+  display: block;
+  line-height: 1%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.seat label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+}
+.seat input + label {
+  background: url(https://civa-files.s3.amazonaws.com/static/img/icons/seat.png) no-repeat center center;
+}
+.seat input:checked + label {
+  background: url(https://civa-files.s3.amazonaws.com/static/img/icons/seat-disabled.png) no-repeat center center;
+}
+
+.section-footer {
+  text-align: right;
+}
+.section-footer a {
+  margin-left: .5em;
+  margin-bottom: 30px;
+}

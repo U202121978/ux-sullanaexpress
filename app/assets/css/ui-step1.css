@@ -1,17 +1,6 @@
 @import url(base.css);
 @import url(search-box.css);
 
-.form-search-container {
-
-}
-
-.search-box {
-  margin-top: 50px;
-  margin-bottom: 60px;
-  width: auto;
-  font-size: 1.2rem;
-}
-
 .results {
   margin-bottom: 60px;
   color: var(--color-2);

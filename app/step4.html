@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sullana Express</title>
+
+  <link href="assets/favicon.png" rel="icon">
+  <link rel="stylesheet" href="assets/css/ui-step2.css">
+
+  <!-- Roboto Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <!-- /Roboto Font -->
+
+  <link rel="stylesheet" href="assets/fontawesome/css/all.css">
+</head>
+<body>
+  <header class="header header--small">
+    <div class="container">
+      <h1 class="logo"><a href="https://www.sullanaexpress.com.pe" title="Transportes Sullana Express"><img src="assets/images/logo.png" alt="Transportes Sullana Express"><span>Transportes Sullana Express</span></a></h1>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Destino</a></li>
+          <li class="has-children">
+            <a href="#">Servicios</a>
+            <ul>
+              <li><a href="#">Servicio Black</a></li>
+              <li><a href="#">Servicio Imperial</a></li>
+              <li><a href="#">Servicio Plus</a></li>
+              <li><a href="#">Servicio Suite</a></li>
+              <li><a href="#">Servicio Carga y Encomiendas</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Terminales</a></li>
+          <li><a href="#">Nosotros</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <style>
+    .card-body{
+      height: 15vh;
+      margin: 25%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    p{
+      width: 50%;
+    }
+  
+  </style>
+  <main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+ <div class="padding">
+        <div class="row">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="col-sm-8 col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span>Pago con tarjeta CRÉDITO/DEBITO</span>
+                                
+                            </div>
+
+                            <div class="col-md-6 text-right" style="margin-top: -5px;">
+
+                                  <img src="https://img.icons8.com/color/36/000000/visa.png">
+                                  <img src="https://img.icons8.com/color/36/000000/mastercard.png">
+                                            
+                            </div>      
+
+                        </div>    
+  
+                        </div>
+                        <div class="card-body" style="height: 350px">
+                            <div class="form-group">
+                               <label for="cc-number" class="control-label">Número de tarjeta</label>
+                               <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;" required>
+                            </div>
+
+                          <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                   <label for="cc-exp" class="control-label">MM/AA</label>
+                                   <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="&bull;&bull; / &bull;&bull;" required>
+                                </div>
+
+
+                            </div>
+
+                             <div class="col-md-6">
+                               <div class="form-group">
+                                 <label for="cc-cvc" class="control-label">CVV</label>
+                                 <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="&bull;&bull;&bull;&bull;" required>
+                              </div>
+                            
+                            </div>
+                              
+      
+                            <div class="form-group">
+                               <label for="numeric" class="control-label">Nombres</label>
+                               <input  type="text" class="input-lg form-control">
+                           </div>
+
+                           <div class="form-group">
+                            <label for="numeric" class="control-label">Apellidos</label>
+                            <input  type="text" class="input-lg form-control">
+                            <div>
+                              <label for="email">Correo:</label>
+                              <input type="email" id="email"
+                                pattern=".+@globex\.com" size="30" required>
+
+                            </div>
+                        
+
+                        </div>
+
+
+                           <div class="form-group">
+                            
+                            <input  value="     PAGAR 90    " type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <img src="assets/images/footer.png" alt="Footer" width="1000">
+    </div>
+  </footer>
+
+  <script src="assets/js/ui-step2.js"></script>
+</body>
+</html>
