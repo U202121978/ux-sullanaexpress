@@ -8,6 +8,8 @@ const fs = require('fs')
 
 const pathbase = '/ux-sullana-express';
 
+app.use(`${pathbase}/assets`, express.static(__dirname + '/app/assets'));
+
 app.all(`${pathbase}/*`, function(req, res, next)
 {
   // Set respons header (geen idee of dit compleet is)
