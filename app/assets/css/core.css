@@ -111,3 +111,95 @@ body {
 .color-2 {
   color: var(--color-2);
 }
+
+.section-title {
+  font-size: 18px;
+  font-weight: var(--roboto-light);
+  margin-bottom: 10px;
+  margin-top: 60px;
+  color: var(--color-2);
+}
+.section-title span {
+  color: var(--color-1);
+  font-weight: var(--roboto-bold);
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+.section-underline {
+  height: 3px;
+  background-color: rgba(74, 74, 74, .25);
+  margin-bottom: 30px;
+}
+
+.section-underline span {
+  display: block;
+  width: 200px;
+  height: 100%;
+  background-color: var(--color-1);
+}
+
+.group-control {
+  display: flex;
+  gap: 15px;
+}
+
+.control {
+  width: 100%;
+  position: relative;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.control label {
+  position: absolute;
+  height: 18px;
+  border: 0;
+  line-height: 1em;
+  font-size: 14px;
+  font-weight: var(--roboto-bold);
+  transform: translate(11px, 15px);
+  transition: transform .3s var(--ease-out-cubic),
+              font-size .3s var(--ease-out-cubic);
+  background-color: #fff;
+  padding: 2px 4px;
+}
+
+.control.focus label,
+.control.hasValue label {
+  transform: translate(11px, -9px);
+  line-height: 1em;
+  font-size: 12px;
+}
+
+.control.focus label {
+  color: var(--color-1);
+}
+
+.control input[type="text"],
+.control input[type="number"],
+.control input[type="email"],
+.control input[type="date"],
+.control select {
+  border: 1px solid rgba(74,74,74,0.5);
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  /*box-shadow: 0 1px 3px rgba(0,0,0,0.15),
+              0 3px 5px rgba(0,0,0,0.15);*/
+  box-sizing: border-box;
+  padding: 0 15px;
+  line-height: 48px;
+  font-size: 14px;
+  font-weight: var(--roboto-regular);
+}
+
+.control input[type="text"]:focus,
+.control input[type="number"]:focus,
+.control input[type="email"]:focus,
+.control input[type="date"]:focus,
+.control select:focus {
+  outline: none !important;
+  border: 1px solid var(--color-1);
+}

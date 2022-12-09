@@ -1,1 +1,10 @@
 @import url(base.css);
+
+.form-container {
+    width: 50%;
+}
+
+.cart-detail {
+    width: 40%;
+    padding-left: 10%;
+}
