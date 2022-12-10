@@ -8,3 +8,8 @@
     width: 40%;
     padding-left: 10%;
 }
+
+h3 {
+    font-size: 22px;
+    color: var(--color-1);
+}

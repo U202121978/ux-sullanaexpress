@@ -116,31 +116,54 @@
           <input type="text" id="f-nacimiento" name="f-nacimiento">
         </div>
 
-        <h3 style="color:red;">¿Cómo quieres pagar?</h3>
+        <h3>¿Cómo quieres pagar?</h3>
 
-        <input type="radio"> <input type="radio">
-
-        <h3 style="color:red;">Importante</h3>
-        <h3 style="color:rgb(2, 2, 2);"> Recuerda que tienes 1 hora y 30 minutos para realizar el pago. De lo contrario, tu reserva quedará liberada.</h3>
-        <input type="text" id="Cupon" name="Cupondeingreso" placeholder="Cupón de ingreso">
-        <button class="btn">Validar</button>
-      
-
-        <input type="date" id="FechadeNacimiento1" name="FechadeNacimiento1" placeholder="Fecha de Nacimiento">
-        <h3 style="color:red;">Facturación</h3>
-        <h3 style="color:rgb(2, 2, 2);"> Activa esta opción para solicitar factura. No aplican algunas promociones</h3>
+        <div class="group-control">
+          <div class="control control-radio">
+            <label for="f-credit-card-1">
+              <input id="f-credit-card-1" name="credit-card" type="radio">
+              <span>Tarjeta crédito / débito</span>
+            </label>
+          </div>
+          <div class="control control-radio">
+            <label for="f-credit-card-2">
+              <input id="f-credit-card-2" name="credit-card" type="radio">
+              <span>Pago efectivo</span>
+            </label>
+          </div>
+        </div>
         
+        <p><span class="color-1">Importante:</span> Recuerda que tienes 1 hora y 30 minutos para realizar el pago. De lo contrario, tu reserva quedará liberada.</p>
+        
+        <div class="group-control">
+          <div class="control">
+            <input type="text" id="Cupon" name="Cupondeingreso" placeholder="Cupón de ingreso">
+          </div>
+          <div class="control">
+            <button class="btn" disabled>Validar</button>
+          </div>
+        </div>
+      
+        <h3>Facturación</h3>
+        <p>Activa esta opción para solicitar factura. No aplican algunas promociones.</p>
+        
+        <div class="control control-radio">
+          <label for="chk-facturacion">
+            <input type="checkbox" name="facturacion" id="chk-facturacion">
+            Solicitar factura
+          </label>
+        </div>
 
-        <button  class="btn" >Activa</button> Solicitar Factura
 
-        Al darle click en continuar acepta nuestra<p><b><a href="default.asp" target="_blank">política de privacidad</a></b></p> y<p><b><a href="default.asp" target="_blank">términos y condiciones</a></b></p>
+        <p>Al darle click en continuar acepta nuestra <a href="#" target="_blank">política de privacidad</a> y <a href="#" target="_blank">términos y condiciones</a></p>
         
 
         <button class="btn">Continuar</button>
 
       </form>
+
       <div class="cart-detail">
-        INFO
+        <h3>Detalle de tu compra</h3>
       </div>
     </div>
   </main>
